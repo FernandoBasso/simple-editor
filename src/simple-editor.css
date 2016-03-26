@@ -1,23 +1,9 @@
-* {
+.simpledit.wrapper * {
     box-sizing: border-box;
 }
-body {
-    font-family: Ubuntu, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: #888;
-    width: 800px;
-    margin: 10px auto 0 auto;
-}
-
-form textarea {
-    width: 500px;
-    height: 100px;
-}
-
-form .fields {
+.simpledit .fields {
     margin-bottom: 10px;
 }
-
 .simpledit textarea {
     display: none;
 }
@@ -30,7 +16,6 @@ form .fields {
     background-color: #f9f9f9;
     background-image: linear-gradient(to bottom, #fcfcfc, #ededed);
     text-align: right;
-    /* height: 26px; */
     padding: 4px 5px 5px 5px;
 }
 .simpledit .buttons i {
@@ -57,18 +42,6 @@ form .fields {
     background-color: #efefef;
     box-shadow: 0 0 2px 0px rgba(100, 100, 100, 0.5) inset;
 }
-/*
-.simpledit .buttons i:before {
-    position: absolute;
-    right: 5px;
-}
-.simpledit .buttons i.bold:before {
-    content: 'b';
-}
-.simpledit .buttons i.italic:before {
-    content: 'i';
-}
-*/
 .simpledit .text {
     outline: none;
     padding: 10px;
@@ -76,3 +49,4 @@ form .fields {
     height: 70px;
     overflow: auto;
 }
+
