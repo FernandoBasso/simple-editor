@@ -12,7 +12,7 @@ var simpleEditor = (function ($) {
                 <i class='btn italic'>i</i> \
                 <i class='btn underline'>u</i> \
             </div> \
-            <div class='text' contentEditable='true'></div> \
+            <div class='text' contentEditable='true' spellcheck='false'></div> \
         </div> \
     ";
 

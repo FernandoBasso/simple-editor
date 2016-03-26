@@ -2,13 +2,20 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Ubuntu, Helvetica, Arial, sans-serif;
     font-size: 16px;
+    color: #888;
+    width: 800px;
+    margin: 10px auto 0 auto;
 }
 
 form textarea {
     width: 500px;
     height: 100px;
+}
+
+form .fields {
+    margin-bottom: 10px;
 }
 
 .simpledit textarea {
