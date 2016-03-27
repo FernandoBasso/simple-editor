@@ -3,7 +3,7 @@ var l = console.log.bind(console);
 var simpleEditor = (function ($) {
 
     var $editors,
-        $b, $i, $i;
+        $b, $i, $b;
 
     var template = " \
         <div class='simpledit wrapper'> \
