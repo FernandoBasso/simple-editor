@@ -12,6 +12,15 @@ Here's a screenshot:
 
 ![Simple Editor — Global Overview](imgs/simple-editor-screenshot1.png)
 
+We have a version that makes use of jQuery, and one that works without any
+external library. If you want to tweak the editor in some way to suit your
+particular needs, the jQuery version is probably easier to change. The pure
+JavaScript version seems to run faster, though, as expected.
+
+The API is exactly the same for both. Currently, we just expose the methods
+`save` and `init`.
+
+
 ## Getting Started
 
 You will need one ore more `textarea`s, each enclosed by a container (`div`, `p`,
@@ -29,12 +38,21 @@ etc.) with the class named `fields`. Something like this:
 </div>
 ```
 
+### jQuery Version
+
 Then include jQuery and Simple Editor:
 
 ```html
 <script type='text/javascript' src='//code.jquery.com/jquery-2.2.2.min.js'></script>
-<script type='text/javascript' src='simple-editor.js'></script>
+<script type='text/javascript' src='src/simple-editor.js'></script>
 ```
+
+### Pure JavaScript Version
+
+```html
+<script type='text/javascript' src='src/simple-editor-purejs.js'></script>
+```
+
 
 Finally, you tell it to transform textareas in rich (yet simple) editors:
 
@@ -57,10 +75,10 @@ ajax, since you can still just grab form data from the `textarea`s themselves
 instead of having to find text inside the editor(s). That is easy enough:
 
 ```javascript
-$('#myform').on('submit', function () {
+document.querySelector('#myform').addEventListener('submit', function () {
     simpleEditor.save();
     // Other code to handle form submission...
-});
+}, false);
 ```
 
 ## Paste as plain text
