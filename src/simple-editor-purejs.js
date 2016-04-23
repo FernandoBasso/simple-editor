@@ -98,6 +98,10 @@ var simpleEditor = (function () {
             tmpdiv.innerHTML = template;
             editors.push(tmpdiv.firstElementChild);
             item.parentNode.insertBefore(tmpdiv.firstElementChild, item);
+
+            // Every time we do editors.push(), we increase its length. We always want
+            // to add the text in the current textarea to the last added editor.
+            editors[editors.length - 1].querySelector('.text').innerHTML = item.value;
         });
 
         // Retrieve all buttons (b, i, u) from the available editors.

@@ -75,6 +75,10 @@ var simpleEditor = (function ($) {
         $textareas.each(function () {
             $(this).css('display', 'none');
             $(this).before(template);
+
+            // Every time we do editors.push(), we increase its length. We always want
+            // to add the text in the current textarea to the last added editor.
+            $(this).prev('.simpledit').find('.text').html(this.value);
         });
 
         $editors = $('.simpledit.wrapper');
